@@ -1,0 +1,18 @@
+{% block content %}
+    <h1 class="title">{{ 'pimpinan_prodi.list'|trans({}, 'AisPimpinanProdiBundle') }}</h1>
+
+    <ul id="pimpinan_prodi-list">
+        {% for pimpinan_prodi in pimpinan_prodis %}
+            <li>
+                <a href="{{ path('api_1_get_pimpinan_prodi', {'id': pimpinan_prodi.id}) }}">{{ pimpinan_prodi.userid }}</a>
+                {#[<a href="{{ path('api_1_edit_pimpinan_prodis', {'id': pimpinan_prodi.id}) }}">{{ 'pimpinan_prodi.edit.link'|trans({}, 'AisPimpinanProdiBundle') }}</a>]#}
+                {#[<a href="{{ path('api_1_remove_pimpinan_prodis', {'id': pimpinan_prodi.id}) }}">{{ 'pimpinan_prodi.remove.link'|trans({}, 'AisPimpinanProdiBundle') }}</a>]#}
+            </li>
+        {% else %}
+            <li>{{ 'pimpinan_prodi.list.empty'|trans({}, 'AisPimpinanProdiBundle') }}</li>
+        {% endfor %}
+    </ul>
+    <p>
+        <a href="{{ path('api_1_new_pimpinan_prodi') }}">{{ 'pimpinan_prodi.new.link'|trans({}, 'AisPimpinanProdiBundle') }}</a>
+    </p>
+{% endblock %}
