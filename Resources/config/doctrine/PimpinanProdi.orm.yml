@@ -1,6 +1,7 @@
 Ais\PimpinanProdiBundle\Entity\PimpinanProdi:
  type: entity
  table: pimpinan_prodi
+ repositoryClass: Ais\PimpinanProdiBundle\Repository\PimpinanProdiRepository
  id:
   id: 
    type: integer

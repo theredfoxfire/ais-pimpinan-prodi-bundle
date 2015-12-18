@@ -16,6 +16,15 @@
             <argument>%ais_pimpinan_prodi.pimpinan_prodi.class%</argument>
             <argument type="service" id="form.factory"></argument>
         </service>
+        <service id="ais_pimpinan_prodi.pimpinan_prodi.manager" class="Doctrine\ORM\EntityManager" factory-service="doctrine" factory-method="getManagerForClass">
+			<argument>%ais_pimpinan_prodi.pimpinan_prodi.class%</argument>
+		</service>
+        
+        <service id="ais_pimpinan_prodi.pimpinan_prodi.repository" 
+			class="Ais\PimpinanProdiBundle\Repository\PimpinanProdiRepository"
+			factory-service="ais_pimpinan_prodi.pimpinan_prodi.manager" factory-method="getRepository">
+				<argument>%ais_pimpinan_prodi.pimpinan_prodi.class%</argument>
+		</service>
     </services>
 
 </container>

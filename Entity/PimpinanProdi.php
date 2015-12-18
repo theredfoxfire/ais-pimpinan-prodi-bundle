@@ -171,4 +171,3 @@ class PimpinanProdi implements PimpinanProdiInterface
         return $this->is_delete;
     }
 }
-
