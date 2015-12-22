@@ -1,5 +1,5 @@
 {
-    "name" : "Ais/PimpinanProdiBundle",
+    "name" : "ais/pimpinanprodibundle",
     "description" : "A bundle filled with PimpinanProdi",
     "type" : "symfony-bundle",
     "authors" : [{
